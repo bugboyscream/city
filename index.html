@@ -4,18 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>hybrid landscapes</title>
-    
+    <title></title>
     <link rel="stylesheet" href="/style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-sun-sky@3.0.3/dist/aframe-sun-sky.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
-   <script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script> 
     <script src="https://unpkg.com/hydra-synth"></script>
     <script src="/script.js" defer></script>
-
   </head>  
   <body>
     <a-scene
@@ -27,22 +22,14 @@
     <a-sound src="src: url(loop.mp3)" loop="true" autoplay="true" position="0 1 -5"></a-sound>
     <a-torus-knot segments-tubular="200" segments-radial="8" q="5" p="0" scale="5 5 10" side="double" position="0 1.6 0" roughness="1" animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"></a-torus-knot>
     <a-entity gltf-model="#baile" scale="0.05 0.05 0.05" position="0 1 -5" animation-mixer></a-entity>
-      <a-assets>
-        <a-asset-item id="baile" src="/baile.gltf"></a-asset-item>
-<a-asset-item id="escalera" src="https://cdn.glitch.com/1f5ee0d0-3d1a-417e-a872-da212b34b334%2Fescalera.gltf?v=1616451805629" response-type="arraybuffer"></a-asset-item>
-<a-sset-item id="hongos" src="https://cdn.glitch.com/1f5ee0d0-3d1a-417e-a872-da212b34b334%2Fhongo.gltf?v=1616451297216" scale="2 2 2"></a-sset-item>
-  <a-sset-item id="piedras" src="https://cdn.glitch.com/1f5ee0d0-3d1a-417e-a872-da212b34b334%2Fpiedras.gltf?v=1616451284250"></a-sset-item>  
-  <audio id="sound" src="https://cdn.glitch.com/1f5ee0d0-3d1a-417e-a872-da212b34b334%2Fsc_1.wav?v=1617403676527"></audio>  
-  
-      </a-assets><a-camera wasd-controls="acceleration: 200"
-             look-controls="pointerLockEnabled: true">
-            <a-entity cursor="fuse: false"
-                    position="0 0 -0.1"
-                    geometry="primitive: circle; radius: 0.0005; segments: 8"
+    <a-camera wasd-controls="acceleration: 200"
+              look-controls="pointerLockEnabled: true">
+              <a-entity cursor="fuse: false"
+                        position="0 0 -0.1"
+                        geometry="primitive: circle; radius: 0.0005; segments: 8"
                         material="color: #FFF; shader: flat; opacity: 0.8">
-            </a-entity>
+              </a-entity>
     </a-camera>
-      <a-sky></a-sky>
     </a-scene>
   </body>
 </html>
