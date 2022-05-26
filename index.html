@@ -14,17 +14,20 @@
   </head>  
   <body>
     <a-scene loading-screen="dotsColor: #FFF; backgroundColor: #000" vr-mode-ui="enabled: false" aframe-init="" renderer="colorManagement: true">
-    <a-sound src="src: url(loop.mp3)" loop="true" autoplay="true" position="0 1 -5"></a-sound>
-    <a-torus-knot segments-tubular="200" segments-radial="8" q="5" p="0" scale="5 5 10" side="double" position="0 1.6 0" roughness="1" animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"></a-torus-knot>
-    <a-entity gltf-model="#baile" scale="0.05 0.05 0.05" position="0 1 -5" animation-mixer></a-entity>
-    <a-camera wasd-controls="acceleration: 200"
-              look-controls="pointerLockEnabled: true">
-              <a-entity cursor="fuse: false"
-                        position="0 0 -0.1"
-                        geometry="primitive: circle; radius: 0.0005; segments: 8"
-                        material="color: #FFF; shader: flat; opacity: 0.8">
-              </a-entity>
-    </a-camera>
-    </a-scene>
+      <a-assets>
+        <a-asset-item id="baile" src="./assets/baile.gltf"></a-asset-item>
+      </a-assets>
+      <a-sound src="src: url(./assets/loop.mp3)" loop="true" autoplay="true" position="0 1 -5"></a-sound>
+      <a-torus-knot segments-tubular="200" segments-radial="8" q="5" p="0" scale="5 5 10" side="double" position="0 1.6 0" roughness="1" animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"></a-torus-knot>
+      <a-entity gltf-model="#baile" scale="0.05 0.05 0.05" position="0 1 -5" animation-mixer></a-entity>
+      <a-camera wasd-controls="acceleration: 200"
+                look-controls="pointerLockEnabled: true">
+                <a-entity cursor="fuse: false"
+                          position="0 0 -0.1"
+                          geometry="primitive: circle; radius: 0.0005; segments: 8"
+                          material="color: #FFF; shader: flat; opacity: 0.8">
+                </a-entity>
+      </a-camera>
+      </a-scene>
   </body>
 </html>
