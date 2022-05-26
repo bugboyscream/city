@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-sun-sky@3.0.3/dist/aframe-sun-sky.min.js"></script>
@@ -13,12 +13,7 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <a-scene
-    id="scene"
-    background="color: #121212"
-    vr-mode-ui="enabled: false"
-    aframe-init=""
-    renderer="colorManagement: true">
+    <a-scene loading-screen="dotsColor: #FFF; backgroundColor: #000" vr-mode-ui="enabled: false" aframe-init="" renderer="colorManagement: true">
     <a-sound src="src: url(loop.mp3)" loop="true" autoplay="true" position="0 1 -5"></a-sound>
     <a-torus-knot segments-tubular="200" segments-radial="8" q="5" p="0" scale="5 5 10" side="double" position="0 1.6 0" roughness="1" animation="property: rotation; to: 0 0 360; dur: 5000; easing: linear; loop: true"></a-torus-knot>
     <a-entity gltf-model="#baile" scale="0.05 0.05 0.05" position="0 1 -5" animation-mixer></a-entity>
